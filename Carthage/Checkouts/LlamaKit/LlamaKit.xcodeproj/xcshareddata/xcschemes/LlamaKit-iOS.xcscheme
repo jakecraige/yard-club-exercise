@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "36CC0348CD04D9B72EA3B8AD"
-               BuildableName = "YardClub.app"
-               BlueprintName = "YardClub"
-               ReferencedContainer = "container:YardClub.xcodeproj">
+               BlueprintIdentifier = "FB2F8D8019BF637B00E4C49E"
+               BuildableName = "LlamaKit.framework"
+               BlueprintName = "LlamaKit-iOS"
+               ReferencedContainer = "container:LlamaKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EB102208743E18F004AC431C"
-               BuildableName = "UnitTests.xctest"
-               BlueprintName = "UnitTests"
-               ReferencedContainer = "container:YardClub.xcodeproj">
+               BlueprintIdentifier = "FB2F8D8B19BF637B00E4C49E"
+               BuildableName = "LlamaKit-iOSTests.xctest"
+               BlueprintName = "LlamaKit-iOSTests"
+               ReferencedContainer = "container:LlamaKit.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36CC0348CD04D9B72EA3B8AD"
-            BuildableName = "YardClub.app"
-            BlueprintName = "YardClub"
-            ReferencedContainer = "container:YardClub.xcodeproj">
+            BlueprintIdentifier = "FB2F8D8019BF637B00E4C49E"
+            BuildableName = "LlamaKit.framework"
+            BlueprintName = "LlamaKit-iOS"
+            ReferencedContainer = "container:LlamaKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -58,16 +58,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36CC0348CD04D9B72EA3B8AD"
-            BuildableName = "YardClub.app"
-            BlueprintName = "YardClub"
-            ReferencedContainer = "container:YardClub.xcodeproj">
+            BlueprintIdentifier = "FB2F8D8019BF637B00E4C49E"
+            BuildableName = "LlamaKit.framework"
+            BlueprintName = "LlamaKit-iOS"
+            ReferencedContainer = "container:LlamaKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -77,16 +76,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "36CC0348CD04D9B72EA3B8AD"
-            BuildableName = "YardClub.app"
-            BlueprintName = "YardClub"
-            ReferencedContainer = "container:YardClub.xcodeproj">
+            BlueprintIdentifier = "FB2F8D8019BF637B00E4C49E"
+            BuildableName = "LlamaKit.framework"
+            BlueprintName = "LlamaKit-iOS"
+            ReferencedContainer = "container:LlamaKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

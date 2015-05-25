@@ -1,0 +1,7 @@
+github "robrix/Box" "1.2.2"
+github "LlamaKit/LlamaKit" "v0.6.0"
+github "Quick/Nimble" "v1.0.0-rc.1"
+github "Quick/Quick" "v0.3.1"
+github "thoughtbot/Runes" "v2.0.0"
+github "thoughtbot/runes" "v1.2.2"
+github "thoughtbot/Argo" "v1.0.2"
