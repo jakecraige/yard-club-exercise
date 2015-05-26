@@ -12,7 +12,11 @@
 		234918531B13B572003CDAE6 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234918521B13B572003CDAE6 /* Runes.framework */; };
 		234918561B13B89E003CDAE6 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234918551B13B89E003CDAE6 /* ApplicationController.swift */; };
 		2364806F1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364806E1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift */; };
-		236480711B13E13E008FFC25 /* RequestEquiptmentChooseStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236480701B13E13E008FFC25 /* RequestEquiptmentChooseStoreViewController.swift */; };
+		236480711B13E13E008FFC25 /* RequestEquipmentChooseStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236480701B13E13E008FFC25 /* RequestEquipmentChooseStoreViewController.swift */; };
+		236480731B140043008FFC25 /* ChooseCatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236480721B140043008FFC25 /* ChooseCatalogTableViewController.swift */; };
+		236480771B1405E8008FFC25 /* BasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 236480761B1405E8008FFC25 /* BasicTableViewCell.xib */; };
+		236480791B140606008FFC25 /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236480781B140606008FFC25 /* BasicTableViewCell.swift */; };
+		236480811B141557008FFC25 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236480801B141557008FFC25 /* UIColor.swift */; };
 		58ABE1F6AEA9F03F9289A099 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 82FB5568963E439029C1F9F5 /* Main.storyboard */; };
 		BFD0EDB7DA61FB2EBD75FE9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E134B9AB463FBD6E1506E /* Images.xcassets */; };
 		C45EB31C4352A4A8A59ECDF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EEDBF86121A613BF14F069 /* AppDelegate.swift */; };
@@ -37,7 +41,11 @@
 		234918521B13B572003CDAE6 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
 		234918551B13B89E003CDAE6 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
 		2364806E1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeaturedEquipmentContentViewController.swift; path = ViewControllers/FeaturedEquipmentContentViewController.swift; sourceTree = "<group>"; };
-		236480701B13E13E008FFC25 /* RequestEquiptmentChooseStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestEquiptmentChooseStoreViewController.swift; path = ViewControllers/RequestEquiptmentChooseStoreViewController.swift; sourceTree = "<group>"; };
+		236480701B13E13E008FFC25 /* RequestEquipmentChooseStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestEquipmentChooseStoreViewController.swift; path = ViewControllers/RequestEquipmentChooseStoreViewController.swift; sourceTree = "<group>"; };
+		236480721B140043008FFC25 /* ChooseCatalogTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChooseCatalogTableViewController.swift; path = ViewControllers/ChooseCatalogTableViewController.swift; sourceTree = "<group>"; };
+		236480761B1405E8008FFC25 /* BasicTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicTableViewCell.xib; sourceTree = "<group>"; };
+		236480781B140606008FFC25 /* BasicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
+		236480801B141557008FFC25 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		2C354D83B6B5B7CE78D7F10C /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		2FE834099C1008F61B03B00A /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		469E134B9AB463FBD6E1506E /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -88,7 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				2364806E1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift */,
-				236480701B13E13E008FFC25 /* RequestEquiptmentChooseStoreViewController.swift */,
+				236480701B13E13E008FFC25 /* RequestEquipmentChooseStoreViewController.swift */,
+				236480721B140043008FFC25 /* ChooseCatalogTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -106,6 +115,7 @@
 		3337821D65FEED2C7E6D8197 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				236480781B140606008FFC25 /* BasicTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -160,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				2FE834099C1008F61B03B00A /* LaunchScreen.xib */,
+				236480761B1405E8008FFC25 /* BasicTableViewCell.xib */,
 			);
 			path = Nibs;
 			sourceTree = "<group>";
@@ -208,6 +219,7 @@
 		B0752A8C2F847AB53F1E0BC9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				236480801B141557008FFC25 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236480771B1405E8008FFC25 /* BasicTableViewCell.xib in Resources */,
 				BFD0EDB7DA61FB2EBD75FE9B /* Images.xcassets in Resources */,
 				C6B4E819602291274B73C265 /* Settings.bundle in Resources */,
 			);
@@ -388,12 +401,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236480791B140606008FFC25 /* BasicTableViewCell.swift in Sources */,
 				C45EB31C4352A4A8A59ECDF6 /* AppDelegate.swift in Sources */,
 				58ABE1F6AEA9F03F9289A099 /* Main.storyboard in Sources */,
 				234918561B13B89E003CDAE6 /* ApplicationController.swift in Sources */,
+				236480811B141557008FFC25 /* UIColor.swift in Sources */,
 				2364806F1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift in Sources */,
 				DA6444E25BFD4EB2B5238A8E /* LaunchScreen.xib in Sources */,
-				236480711B13E13E008FFC25 /* RequestEquiptmentChooseStoreViewController.swift in Sources */,
+				236480711B13E13E008FFC25 /* RequestEquipmentChooseStoreViewController.swift in Sources */,
+				236480731B140043008FFC25 /* ChooseCatalogTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

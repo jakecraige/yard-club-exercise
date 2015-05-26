@@ -1,5 +1,5 @@
 //
-//  RequestEquiptmentChooseStoreViewController.swift
+//  RequestEquipmentChooseStoreViewController.swift
 //  YardClub
 //
 //  Created by James Craige on 5/25/15.
@@ -9,7 +9,7 @@
 import UIKit
 import Runes
 
-class RequestEquiptmentChooseStoreViewController: UIViewController {
+class RequestEquipmentChooseStoreViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
 
@@ -33,6 +33,7 @@ class RequestEquiptmentChooseStoreViewController: UIViewController {
     private struct Constants {
         static let PageVCEmbedIdentifier = "PageVCEmbed"
         static let PageContentVCIdentifier = "FeaturedEquipmentPageContentVC"
+        static let ChooseCatalogIdentifier = "ShowChooseCatalog"
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -40,14 +41,31 @@ class RequestEquiptmentChooseStoreViewController: UIViewController {
             switch identifier {
             case Constants.PageVCEmbedIdentifier:
                 pageViewController = segue.destinationViewController as? UIPageViewController
+            case Constants.ChooseCatalogIdentifier:
+                let vc = segue.destinationViewController as? ChooseCatalogTableViewController
+                vc?.storeType = sender as? String
+                vc?.navigationItem.title = vc?.storeType
             default: break
             }
         }
     }
+
+    private struct StoreType {
+        static let Rental = "rental"
+        static let Contractor = "contractor"
+    }
+
+    @IBAction func chooseRentalStore(sender: UIButton) {
+        performSegueWithIdentifier(Constants.ChooseCatalogIdentifier, sender: StoreType.Rental)
+    }
+
+    @IBAction func chooseContractor(sender: UIButton) {
+        performSegueWithIdentifier(Constants.ChooseCatalogIdentifier, sender: StoreType.Contractor)
+    }
 }
 
 
-extension RequestEquiptmentChooseStoreViewController: UIPageViewControllerDataSource {
+extension RequestEquipmentChooseStoreViewController: UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         let index = (viewController as? FeaturedEquipmentContentViewController)?.pageIndex
 
@@ -72,7 +90,7 @@ extension RequestEquiptmentChooseStoreViewController: UIPageViewControllerDataSo
     }
 }
 
-extension RequestEquiptmentChooseStoreViewController: UIPageViewControllerDelegate {
+extension RequestEquipmentChooseStoreViewController: UIPageViewControllerDelegate {
     func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [AnyObject], transitionCompleted completed: Bool) {
         if (!completed) { return }
 
