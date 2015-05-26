@@ -10,6 +10,9 @@
 		2349184F1B13B56E003CDAE6 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2349184C1B13B56E003CDAE6 /* Argo.framework */; };
 		234918511B13B56E003CDAE6 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2349184E1B13B56E003CDAE6 /* LlamaKit.framework */; };
 		234918531B13B572003CDAE6 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234918521B13B572003CDAE6 /* Runes.framework */; };
+		234918561B13B89E003CDAE6 /* ApplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234918551B13B89E003CDAE6 /* ApplicationController.swift */; };
+		2364806F1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364806E1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift */; };
+		236480711B13E13E008FFC25 /* RequestEquiptmentChooseStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236480701B13E13E008FFC25 /* RequestEquiptmentChooseStoreViewController.swift */; };
 		58ABE1F6AEA9F03F9289A099 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 82FB5568963E439029C1F9F5 /* Main.storyboard */; };
 		BFD0EDB7DA61FB2EBD75FE9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E134B9AB463FBD6E1506E /* Images.xcassets */; };
 		C45EB31C4352A4A8A59ECDF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EEDBF86121A613BF14F069 /* AppDelegate.swift */; };
@@ -32,6 +35,9 @@
 		2349184C1B13B56E003CDAE6 /* Argo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Argo.framework; path = Carthage/Build/iOS/Argo.framework; sourceTree = "<group>"; };
 		2349184E1B13B56E003CDAE6 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = "<group>"; };
 		234918521B13B572003CDAE6 /* Runes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Runes.framework; path = Carthage/Build/iOS/Runes.framework; sourceTree = "<group>"; };
+		234918551B13B89E003CDAE6 /* ApplicationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationController.swift; sourceTree = "<group>"; };
+		2364806E1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeaturedEquipmentContentViewController.swift; path = ViewControllers/FeaturedEquipmentContentViewController.swift; sourceTree = "<group>"; };
+		236480701B13E13E008FFC25 /* RequestEquiptmentChooseStoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestEquiptmentChooseStoreViewController.swift; path = ViewControllers/RequestEquiptmentChooseStoreViewController.swift; sourceTree = "<group>"; };
 		2C354D83B6B5B7CE78D7F10C /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		2FE834099C1008F61B03B00A /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		469E134B9AB463FBD6E1506E /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -81,6 +87,8 @@
 		234918541B13B60F003CDAE6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2364806E1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift */,
+				236480701B13E13E008FFC25 /* RequestEquiptmentChooseStoreViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				07EEDBF86121A613BF14F069 /* AppDelegate.swift */,
+				234918551B13B89E003CDAE6 /* ApplicationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -381,7 +390,10 @@
 			files = (
 				C45EB31C4352A4A8A59ECDF6 /* AppDelegate.swift in Sources */,
 				58ABE1F6AEA9F03F9289A099 /* Main.storyboard in Sources */,
+				234918561B13B89E003CDAE6 /* ApplicationController.swift in Sources */,
+				2364806F1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift in Sources */,
 				DA6444E25BFD4EB2B5238A8E /* LaunchScreen.xib in Sources */,
+				236480711B13E13E008FFC25 /* RequestEquiptmentChooseStoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
