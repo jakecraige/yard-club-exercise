@@ -67,15 +67,15 @@ class RequestEquipmentChooseStoreViewController: UIViewController {
 
 extension RequestEquipmentChooseStoreViewController: UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        let index = (viewController as? FeaturedEquipmentContentViewController)?.pageIndex
+         let index = (viewController as? FeaturedEquipmentContentViewController)?.pageIndex
 
-        return index >>- { $0 - 1 } >>- { self.viewControllerAtIndex($0) }
+        return index <^> { $0 - 1 } >>- { self.viewControllerAtIndex($0) }
     }
 
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         let index = (viewController as? FeaturedEquipmentContentViewController)?.pageIndex
 
-        return index >>- { $0 + 1 } >>- { self.viewControllerAtIndex($0) }
+        return index <^> { $0 + 1 } >>- { self.viewControllerAtIndex($0) }
     }
 
     func viewControllerAtIndex(index: Int) -> UIViewController? {
