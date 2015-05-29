@@ -9,10 +9,9 @@
 import UIKit
 
 class ApplicationController {
-    let rootViewController: UIViewController
-
-    init() {
+    var rootViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        rootViewController = storyboard.instantiateInitialViewController() as! UIViewController
+        let vc = storyboard.instantiateInitialViewController() as! UIViewController
+        return vc
     }
 }
