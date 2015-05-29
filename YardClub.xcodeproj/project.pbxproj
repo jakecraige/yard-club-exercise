@@ -23,6 +23,10 @@
 		C45EB31C4352A4A8A59ECDF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EEDBF86121A613BF14F069 /* AppDelegate.swift */; };
 		C6B4E819602291274B73C265 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E5C87D9F771B19B338D39B9E /* Settings.bundle */; };
 		DA6444E25BFD4EB2B5238A8E /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2FE834099C1008F61B03B00A /* LaunchScreen.xib */; };
+		E713837A1B191C2100C35FC1 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71383791B191C2100C35FC1 /* ApiClient.swift */; };
+		E713837C1B19236100C35FC1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713837B1B19236100C35FC1 /* Category.swift */; };
+		E713837F1B1928E000C35FC1 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713837E1B1928E000C35FC1 /* GCD.swift */; };
+		E71383811B19299500C35FC1 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71383801B19299500C35FC1 /* JsonParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		771FF5D1CD06E5E699806862 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82FB5568963E439029C1F9F5 /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E5C87D9F771B19B338D39B9E /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		E71383791B191C2100C35FC1 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		E713837B1B19236100C35FC1 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E713837E1B1928E000C35FC1 /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
+		E71383801B19299500C35FC1 /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,7 @@
 		8176E99AF8458D1D6AB9D50B /* YardClub */ = {
 			isa = PBXGroup;
 			children = (
+				E713837D1B1928A900C35FC1 /* Globals */,
 				236480821B142C97008FFC25 /* Functional */,
 				234918541B13B60F003CDAE6 /* ViewControllers */,
 				B0752A8C2F847AB53F1E0BC9 /* Extensions */,
@@ -211,6 +220,8 @@
 		AC222C4D99DB4DDD87964E94 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E71383791B191C2100C35FC1 /* ApiClient.swift */,
+				E713837B1B19236100C35FC1 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,6 +259,15 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E713837D1B1928A900C35FC1 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				E713837E1B1928E000C35FC1 /* GCD.swift */,
+				E71383801B19299500C35FC1 /* JsonParser.swift */,
+			);
+			name = Globals;
 			sourceTree = "<group>";
 		};
 		F732DDE1E59F304A0043CBD8 /* Frameworks */ = {
@@ -412,6 +432,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E713837A1B191C2100C35FC1 /* ApiClient.swift in Sources */,
+				E713837F1B1928E000C35FC1 /* GCD.swift in Sources */,
 				236480791B140606008FFC25 /* BasicTableViewCell.swift in Sources */,
 				236480841B142CC7008FFC25 /* Operators.swift in Sources */,
 				C45EB31C4352A4A8A59ECDF6 /* AppDelegate.swift in Sources */,
@@ -422,6 +444,8 @@
 				DA6444E25BFD4EB2B5238A8E /* LaunchScreen.xib in Sources */,
 				236480711B13E13E008FFC25 /* RequestEquipmentChooseStoreViewController.swift in Sources */,
 				236480731B140043008FFC25 /* ChooseCatalogTableViewController.swift in Sources */,
+				E71383811B19299500C35FC1 /* JsonParser.swift in Sources */,
+				E713837C1B19236100C35FC1 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
