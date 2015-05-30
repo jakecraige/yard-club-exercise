@@ -32,3 +32,9 @@ extension Category: Printable {
         return "Category - id: \(id), name: \(name)"
     }
 }
+
+extension Category: Equatable { }
+
+func ==(lhs: Category, rhs: Category) -> Bool {
+    return lhs.id == rhs.id
+}

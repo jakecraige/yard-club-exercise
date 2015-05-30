@@ -48,6 +48,8 @@ extension ChooseCategoryTableViewController: UITableViewDataSource {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(BasicTableViewCell.Constants.ReuseIdentifier) as! BasicTableViewCell
+        let category = controller?.categoryForIndexPath(indexPath)
+        cell.label.text = category?.name
         return cell;
     }
 }

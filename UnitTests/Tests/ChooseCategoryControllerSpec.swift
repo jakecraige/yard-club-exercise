@@ -26,5 +26,23 @@ class ChooseCategoryControllerSpec: QuickSpec {
                 expect(controller.categories.value).toEventuallyNot(beEmpty())
             }
         }
+
+        describe("categoryForIndexPath") {
+            it("returns the correct category") {
+                let client = FakeApiClient()
+                let controller = ChooseCategoryController(apiClient: client)
+                let category = Category(id: 0, name: "FakeCategory")
+                let indexPath = NSIndexPath(forRow: 0, inSection: 0)
+
+                expect(controller.categories.value).to(beEmpty())
+
+                controller.requestCategories()
+                sendNext(client.categoriesSink, [category])
+
+                let categoryAtIndexPath = controller.categoryForIndexPath(indexPath)
+
+                expect(categoryAtIndexPath) == category
+            }
+        }
     }
 }

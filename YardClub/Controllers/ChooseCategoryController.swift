@@ -35,4 +35,8 @@ class ChooseCategoryController {
     func requestCategories() {
         self.apiClient.getCategories.apply().start()
     }
+
+    func categoryForIndexPath(indexPath: NSIndexPath) -> Category {
+        return categories.value[indexPath.row]
+    }
 }
