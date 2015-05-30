@@ -8,19 +8,22 @@
 
 import Foundation
 import Runes
-import Argo
+import ReactiveCocoa
 
 class ApiClient {
     let apiURL = NSURL(string: "http://yardclub.github.io/mobile-interview/api")!
 
-    func getCategories() {
-        let categoriesURL = apiURL.URLByAppendingPathComponent("catalog.json")
-        let task = NSURLSession.sharedSession().dataTaskWithURL(categoriesURL) { (data, response, error) in
-            var categories: [Category] = parseJsonArray(data)
-            for cat in categories {
-                println(cat)
+    let getCategories: Action<AnyObject?, [Category], NSError>
+
+    init() {
+        getCategories = Action {
+            let categoriesURL = apiURL.URLByAppendingPathComponent("catalog.json")
+            let request = NSURLRequest(URL: categoriesURL)
+            return NSURLSession.sharedSession().rac_dataWithRequest(request)
+                |> map { data, _ in
+                    var categories: [Category] = parseJsonArray(data)
+                    return categories
             }
         }
-        task.resume()
     }
 }

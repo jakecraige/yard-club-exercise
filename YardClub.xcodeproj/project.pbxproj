@@ -25,7 +25,6 @@
 		DA6444E25BFD4EB2B5238A8E /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = 2FE834099C1008F61B03B00A /* LaunchScreen.xib */; };
 		E713837A1B191C2100C35FC1 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71383791B191C2100C35FC1 /* ApiClient.swift */; };
 		E713837C1B19236100C35FC1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713837B1B19236100C35FC1 /* Category.swift */; };
-		E713837F1B1928E000C35FC1 /* GCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713837E1B1928E000C35FC1 /* GCD.swift */; };
 		E71383811B19299500C35FC1 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71383801B19299500C35FC1 /* JsonParser.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		E5C87D9F771B19B338D39B9E /* Settings.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		E71383791B191C2100C35FC1 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		E713837B1B19236100C35FC1 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		E713837E1B1928E000C35FC1 /* GCD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCD.swift; sourceTree = "<group>"; };
 		E71383801B19299500C35FC1 /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,7 +262,6 @@
 		E713837D1B1928A900C35FC1 /* Globals */ = {
 			isa = PBXGroup;
 			children = (
-				E713837E1B1928E000C35FC1 /* GCD.swift */,
 				E71383801B19299500C35FC1 /* JsonParser.swift */,
 			);
 			name = Globals;
@@ -433,7 +430,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E713837A1B191C2100C35FC1 /* ApiClient.swift in Sources */,
-				E713837F1B1928E000C35FC1 /* GCD.swift in Sources */,
 				236480791B140606008FFC25 /* BasicTableViewCell.swift in Sources */,
 				236480841B142CC7008FFC25 /* Operators.swift in Sources */,
 				C45EB31C4352A4A8A59ECDF6 /* AppDelegate.swift in Sources */,
