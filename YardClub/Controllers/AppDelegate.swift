@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,10 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = controller?.rootViewController
         window?.makeKeyAndVisible()
 
-        let client = ApiClient()
-        let x = client.getCategories.apply(nil)
-
-        x.start(error: nil, completed: nil, interrupted: nil, next: { println("done") })
+        controller?.printAllCategories()
 
         return true
     }

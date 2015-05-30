@@ -13,11 +13,12 @@ import ReactiveCocoa
 class ApiClient {
     let apiURL = NSURL(string: "http://yardclub.github.io/mobile-interview/api")!
 
-    let getCategories: Action<AnyObject?, [Category], NSError>
+    var getCategories: Action<Void, [Category], NSError>!
 
     init() {
+        var enabled = MutableProperty(true)
         getCategories = Action {
-            let categoriesURL = apiURL.URLByAppendingPathComponent("catalog.json")
+            let categoriesURL = self.apiURL.URLByAppendingPathComponent("catalog.json")
             let request = NSURLRequest(URL: categoriesURL)
             return NSURLSession.sharedSession().rac_dataWithRequest(request)
                 |> map { data, _ in

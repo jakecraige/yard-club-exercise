@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class ApplicationController {
     var rootViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
         let vc = storyboard.instantiateInitialViewController() as! UIViewController
         return vc
+    }
+
+    let apiClient = ApiClient()
+
+    func printAllCategories() {
+        apiClient.getCategories.apply().start()
+        apiClient.getCategories.values
+            |> observe(next: { println($0) })
     }
 }

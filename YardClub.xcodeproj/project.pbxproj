@@ -18,6 +18,7 @@
 		236480791B140606008FFC25 /* BasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236480781B140606008FFC25 /* BasicTableViewCell.swift */; };
 		236480811B141557008FFC25 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236480801B141557008FFC25 /* UIColor.swift */; };
 		236480841B142CC7008FFC25 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236480831B142CC7008FFC25 /* Operators.swift */; };
+		23B8745E1B1A3A300080B352 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B8745D1B1A3A300080B352 /* ReactiveCocoa.framework */; };
 		58ABE1F6AEA9F03F9289A099 /* Main.storyboard in Sources */ = {isa = PBXBuildFile; fileRef = 82FB5568963E439029C1F9F5 /* Main.storyboard */; };
 		BFD0EDB7DA61FB2EBD75FE9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469E134B9AB463FBD6E1506E /* Images.xcassets */; };
 		C45EB31C4352A4A8A59ECDF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EEDBF86121A613BF14F069 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 		236480781B140606008FFC25 /* BasicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTableViewCell.swift; sourceTree = "<group>"; };
 		236480801B141557008FFC25 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		236480831B142CC7008FFC25 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		23B8745D1B1A3A300080B352 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		2C354D83B6B5B7CE78D7F10C /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		2FE834099C1008F61B03B00A /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		469E134B9AB463FBD6E1506E /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				234918511B13B56E003CDAE6 /* LlamaKit.framework in Frameworks */,
 				234918531B13B572003CDAE6 /* Runes.framework in Frameworks */,
 				2349184F1B13B56E003CDAE6 /* Argo.framework in Frameworks */,
+				23B8745E1B1A3A300080B352 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +273,7 @@
 		F732DDE1E59F304A0043CBD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23B8745D1B1A3A300080B352 /* ReactiveCocoa.framework */,
 				234918521B13B572003CDAE6 /* Runes.framework */,
 				2349184C1B13B56E003CDAE6 /* Argo.framework */,
 				2349184E1B13B56E003CDAE6 /* LlamaKit.framework */,
@@ -407,6 +411,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Box.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 			);
 			name = "Copy framworks (Carthage)";
 			outputPaths = (
