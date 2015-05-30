@@ -1,5 +1,5 @@
 //
-//  ChooseCatalogTableViewController.swift
+//  ChooseCategoryTableViewController.swift
 //  YardClub
 //
 //  Created by James Craige on 5/25/15.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ChooseCatalogTableViewController: UITableViewController {
+class ChooseCategoryTableViewController: UITableViewController {
     var storeType: String?
     var catalogs: [Int] = [1,3,4,5]
+    var controller: ChooseCategoryController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class ChooseCatalogTableViewController: UITableViewController {
     }
 }
 
-extension ChooseCatalogTableViewController: UITableViewDataSource {
+extension ChooseCategoryTableViewController: UITableViewDataSource {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -37,7 +38,7 @@ extension ChooseCatalogTableViewController: UITableViewDataSource {
     }
 }
 
-extension ChooseCatalogTableViewController: UITableViewDelegate {
+extension ChooseCategoryTableViewController: UITableViewDelegate {
     struct Constants {
         static let HeaderViewHeight: CGFloat = 36
     }

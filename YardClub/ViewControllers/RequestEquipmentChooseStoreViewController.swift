@@ -42,7 +42,7 @@ class RequestEquipmentChooseStoreViewController: UIViewController {
             case Constants.PageVCEmbedIdentifier:
                 pageViewController = segue.destinationViewController as? UIPageViewController
             case Constants.ChooseCatalogIdentifier:
-                let vc = segue.destinationViewController as? ChooseCatalogTableViewController
+                let vc = segue.destinationViewController as? ChooseCategoryTableViewController
                 vc?.storeType = sender as? String
                 vc?.navigationItem.title = vc?.storeType
             default: break

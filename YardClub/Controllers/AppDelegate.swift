@@ -21,8 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = controller?.rootViewController
         window?.makeKeyAndVisible()
 
-        controller?.printAllCategories()
-
         return true
     }
 }
