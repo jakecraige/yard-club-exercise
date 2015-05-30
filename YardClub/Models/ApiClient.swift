@@ -7,24 +7,25 @@
 //
 
 import Foundation
-import Runes
 import ReactiveCocoa
 
-class ApiClient {
+typealias RequestSignalProducer = SignalProducer<(NSData, NSURLResponse), NSError>
+
+class ApiClient: ApiConnectable {
     let apiURL = NSURL(string: "http://yardclub.github.io/mobile-interview/api")!
 
     var getCategories: Action<Void, [Category], NSError>!
 
     init() {
-        var enabled = MutableProperty(true)
         getCategories = Action {
             let categoriesURL = self.apiURL.URLByAppendingPathComponent("catalog.json")
-            let request = NSURLRequest(URL: categoriesURL)
-            return NSURLSession.sharedSession().rac_dataWithRequest(request)
-                |> map { data, _ in
-                    var categories: [Category] = parseJsonArray(data)
-                    return categories
-            }
+            return self.getRequest(categoriesURL)
+                |> map { data, _ in parseJsonArray(data) }
         }
+    }
+
+    func getRequest(url: NSURL) -> RequestSignalProducer {
+        let request = NSURLRequest(URL: url)
+        return NSURLSession.sharedSession().rac_dataWithRequest(request)
     }
 }

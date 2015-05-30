@@ -16,11 +16,9 @@ class ApplicationController {
         return vc
     }
 
-    let apiClient = ApiClient()
-
-    func printAllCategories() {
-        apiClient.getCategories.apply().start()
-        apiClient.getCategories.values
-            |> observe(next: { println($0) })
+    var chooseCategoryController: ChooseCategoryController {
+        return ChooseCategoryController(apiClient: apiClient)
     }
+
+    let apiClient = ApiClient()
 }
