@@ -13,6 +13,8 @@ class RequestEquipmentChooseStoreViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pageControl: UIPageControl!
 
+    var controller: ApplicationController?
+
     weak var pageViewController: UIPageViewController? {
         didSet {
             pageViewController?.delegate = self
@@ -44,6 +46,7 @@ class RequestEquipmentChooseStoreViewController: UIViewController {
             case Constants.ChooseCatalogIdentifier:
                 let vc = segue.destinationViewController as? ChooseCategoryTableViewController
                 vc?.storeType = sender as? String
+                vc?.controller = controller?.chooseCategoryController
                 vc?.navigationItem.title = vc?.storeType
             default: break
             }

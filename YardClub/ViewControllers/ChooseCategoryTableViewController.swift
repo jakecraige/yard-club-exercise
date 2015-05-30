@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import ReactiveCocoa
 
 class ChooseCategoryTableViewController: UITableViewController {
     var storeType: String?
-    var catalogs: [Int] = [1,3,4,5]
     var controller: ChooseCategoryController?
+    var categories: [Category] {
+        get { return controller?.categories.value ?? [] }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,17 @@ class ChooseCategoryTableViewController: UITableViewController {
         tableView.estimatedRowHeight = BasicTableViewCell.Constants.estimatedRowHeight
         let tableCellNib = UINib(nibName: "BasicTableViewCell", bundle: NSBundle.mainBundle())
         tableView.registerNib(tableCellNib, forCellReuseIdentifier: BasicTableViewCell.Constants.ReuseIdentifier)
+        refreshControl = UIRefreshControl()
+
+        if let ctrl = controller {
+            let newCategories = ctrl.categories.producer |> observeOn(UIScheduler())
+
+            ctrl.refreshBegan |> start(next: { _ in self.refreshControl?.beginRefreshing() })
+            ctrl.refreshEnded |> start(next: { _ in self.refreshControl?.endRefreshing() })
+            newCategories |> start(next: { _ in self.tableView.reloadData() })
+
+            ctrl.requestCategories()
+        }
     }
 }
 
@@ -29,7 +43,7 @@ extension ChooseCategoryTableViewController: UITableViewDataSource {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return catalogs.count
+        return categories.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

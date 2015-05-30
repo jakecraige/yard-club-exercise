@@ -13,6 +13,20 @@ class ChooseCategoryController {
 
     var categories: MutableProperty<[Category]> = MutableProperty([])
 
+    var refreshing: SignalProducer<Bool, NoError> {
+        get {
+            return apiClient.getCategories.executing.producer |> throttle(0.75, onScheduler: QueueScheduler.mainQueueScheduler)
+        }
+    }
+
+    var refreshBegan: SignalProducer<Bool, NoError> {
+        get { return refreshing |> filter({ $0 == true }) }
+    }
+
+    var refreshEnded: SignalProducer<Bool, NoError> {
+        get { return refreshing |> filter({ $0 == false }) }
+    }
+
     init(apiClient: ApiConnectable) {
         self.apiClient = apiClient
         self.categories <~ self.apiClient.getCategories.values

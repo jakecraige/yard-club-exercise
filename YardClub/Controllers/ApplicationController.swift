@@ -12,7 +12,9 @@ import ReactiveCocoa
 class ApplicationController {
     var rootViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
-        let vc = storyboard.instantiateInitialViewController() as! UIViewController
+        let vc = storyboard.instantiateInitialViewController() as! UITabBarController
+        let contentVC = vc.viewControllers?.first?.viewControllers?.first as? RequestEquipmentChooseStoreViewController
+        contentVC?.controller = self
         return vc
     }
 
