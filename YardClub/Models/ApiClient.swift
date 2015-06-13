@@ -24,6 +24,11 @@ class ApiClient: ApiConnectable {
         }
     }
 
+    func getSubcategoriesForCategory(category: Category) -> SignalProducer<[Subcategory], NSError> {
+        let subcategoriesURL = self.apiURL.URLByAppendingPathComponent("catalog/\(category.id).json")
+        return self.getRequest(subcategoriesURL) |> map { parseJsonArray($0.0) }
+    }
+
     func getRequest(url: NSURL) -> RequestSignalProducer {
         let request = NSURLRequest(URL: url)
         return NSURLSession.sharedSession().rac_dataWithRequest(request)

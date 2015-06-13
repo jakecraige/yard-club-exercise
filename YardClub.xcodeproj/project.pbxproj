@@ -38,6 +38,9 @@
 		E713837A1B191C2100C35FC1 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71383791B191C2100C35FC1 /* ApiClient.swift */; };
 		E713837C1B19236100C35FC1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E713837B1B19236100C35FC1 /* Category.swift */; };
 		E71383811B19299500C35FC1 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71383801B19299500C35FC1 /* JsonParser.swift */; };
+		E793A6E11B2C84AC00418B59 /* ChooseSubcategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E793A6E01B2C84AC00418B59 /* ChooseSubcategoryTableViewController.swift */; };
+		E793A6E51B2C87DC00418B59 /* ChooseSubcategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E793A6E41B2C87DC00418B59 /* ChooseSubcategoryController.swift */; };
+		E793A6E71B2C8B1100418B59 /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E793A6E61B2C8B1100418B59 /* Subcategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		E71383791B191C2100C35FC1 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		E713837B1B19236100C35FC1 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		E71383801B19299500C35FC1 /* JsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
+		E793A6E01B2C84AC00418B59 /* ChooseSubcategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChooseSubcategoryTableViewController.swift; path = ViewControllers/ChooseSubcategoryTableViewController.swift; sourceTree = "<group>"; };
+		E793A6E41B2C87DC00418B59 /* ChooseSubcategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseSubcategoryController.swift; sourceTree = "<group>"; };
+		E793A6E61B2C8B1100418B59 /* Subcategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subcategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 			children = (
 				2364806E1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift */,
 				236480701B13E13E008FFC25 /* RequestEquipmentChooseStoreViewController.swift */,
+				E793A6E01B2C84AC00418B59 /* ChooseSubcategoryTableViewController.swift */,
 				236480721B140043008FFC25 /* ChooseCategoryTableViewController.swift */,
 			);
 			name = ViewControllers;
@@ -191,6 +198,7 @@
 				07EEDBF86121A613BF14F069 /* AppDelegate.swift */,
 				234918551B13B89E003CDAE6 /* ApplicationController.swift */,
 				235244571B1A436B00189E3D /* ChooseCategoryController.swift */,
+				E793A6E41B2C87DC00418B59 /* ChooseSubcategoryController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 			children = (
 				E71383791B191C2100C35FC1 /* ApiClient.swift */,
 				E713837B1B19236100C35FC1 /* Category.swift */,
+				E793A6E61B2C8B1100418B59 /* Subcategory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -485,12 +494,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				235244581B1A436B00189E3D /* ChooseCategoryController.swift in Sources */,
+				E793A6E51B2C87DC00418B59 /* ChooseSubcategoryController.swift in Sources */,
 				E713837A1B191C2100C35FC1 /* ApiClient.swift in Sources */,
 				236480791B140606008FFC25 /* BasicTableViewCell.swift in Sources */,
 				236480841B142CC7008FFC25 /* Operators.swift in Sources */,
 				C45EB31C4352A4A8A59ECDF6 /* AppDelegate.swift in Sources */,
 				58ABE1F6AEA9F03F9289A099 /* Main.storyboard in Sources */,
 				234918561B13B89E003CDAE6 /* ApplicationController.swift in Sources */,
+				E793A6E71B2C8B1100418B59 /* Subcategory.swift in Sources */,
+				E793A6E11B2C84AC00418B59 /* ChooseSubcategoryTableViewController.swift in Sources */,
 				236480811B141557008FFC25 /* UIColor.swift in Sources */,
 				2364806F1B13E045008FFC25 /* FeaturedEquipmentContentViewController.swift in Sources */,
 				DA6444E25BFD4EB2B5238A8E /* LaunchScreen.xib in Sources */,

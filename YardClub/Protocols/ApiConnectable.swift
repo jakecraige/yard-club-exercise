@@ -12,4 +12,6 @@ import ReactiveCocoa
 protocol ApiConnectable {
     var apiURL: NSURL { get }
     var getCategories: Action<Void, [Category], NSError>! { get set }
+
+    func getSubcategoriesForCategory(category: Category) -> SignalProducer<[Subcategory], NSError>
 }
