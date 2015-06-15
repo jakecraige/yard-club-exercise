@@ -21,6 +21,8 @@ class ChooseSubcategoryController {
     }
 
     func requestSubcategories() {
+        // You can only use the <~ operator with a SignalProducer that produces
+        // an error of type NoError
         let noErrorRequest = request |> catch { _ in SignalProducer<[Subcategory], NoError>(value: []) }
         subcategories <~ noErrorRequest
     }

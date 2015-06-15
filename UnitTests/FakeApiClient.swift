@@ -19,4 +19,8 @@ class FakeApiClient: ApiConnectable {
         categoriesSink = sink
         getCategories = Action { producer }
     }
+
+    func getSubcategoriesForCategory(category: Category) -> SignalProducer<[Subcategory], NSError> {
+        return SignalProducer<[Subcategory], NSError>(value: [])
+    }
 }

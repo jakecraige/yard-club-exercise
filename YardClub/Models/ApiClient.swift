@@ -19,8 +19,7 @@ class ApiClient: ApiConnectable {
     init() {
         getCategories = Action {
             let categoriesURL = self.apiURL.URLByAppendingPathComponent("catalog.json")
-            return self.getRequest(categoriesURL)
-                |> map { data, _ in parseJsonArray(data) }
+            return self.getRequest(categoriesURL) |> map { parseJsonArray($0.0) }
         }
     }
 

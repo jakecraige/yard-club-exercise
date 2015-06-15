@@ -41,6 +41,7 @@
 		E793A6E11B2C84AC00418B59 /* ChooseSubcategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E793A6E01B2C84AC00418B59 /* ChooseSubcategoryTableViewController.swift */; };
 		E793A6E51B2C87DC00418B59 /* ChooseSubcategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E793A6E41B2C87DC00418B59 /* ChooseSubcategoryController.swift */; };
 		E793A6E71B2C8B1100418B59 /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E793A6E61B2C8B1100418B59 /* Subcategory.swift */; };
+		E793A6E81B2F31AF00418B59 /* Subcategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E793A6E61B2C8B1100418B59 /* Subcategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -485,6 +486,7 @@
 				235244651B1A47B700189E3D /* ApiConnectable.swift in Sources */,
 				2352445B1B1A44D500189E3D /* ChooseCategoryControllerSpec.swift in Sources */,
 				2352446A1B1A4A4F00189E3D /* ChooseCategoryController.swift in Sources */,
+				E793A6E81B2F31AF00418B59 /* Subcategory.swift in Sources */,
 				2352446B1B1A4C1E00189E3D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
